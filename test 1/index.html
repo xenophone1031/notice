@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auto Shooter Prototype</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="game-root">
+    <canvas id="game-canvas"></canvas>
+
+    <div id="hud" class="hidden">
+      <div class="hud-row">
+        <div class="bar-wrap">
+          <span class="label">HP</span>
+          <div class="bar"><div id="hp-fill" class="fill hp"></div></div>
+          <span id="hp-text" class="value">100/100</span>
+        </div>
+        <div class="meta">
+          <span>Lv <strong id="level-text">1</strong></span>
+          <span>Kills <strong id="kills-text">0</strong></span>
+        </div>
+      </div>
+      <div class="bar-wrap xp-wrap">
+        <span class="label">XP</span>
+        <div class="bar"><div id="xp-fill" class="fill xp"></div></div>
+        <span id="xp-text" class="value">0/5</span>
+      </div>
+    </div>
+
+    <div id="start-screen" class="panel">
+      <h1>Auto Shooter</h1>
+      <p>WASD / 방향키 이동 · 공격은 자동 · 레벨업으로 무기 획득</p>
+      <button id="btn-start" type="button">Start</button>
+    </div>
+
+    <div id="levelup-screen" class="panel hidden">
+      <h2>Level Up!</h2>
+      <p>강화할 능력을 고르세요 (1 / 2 / 3)</p>
+      <div id="upgrade-cards" class="cards"></div>
+    </div>
+
+    <div id="gameover-screen" class="panel hidden">
+      <h2>Game Over</h2>
+      <p id="gameover-stats"></p>
+      <button id="btn-retry" type="button">Retry</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
